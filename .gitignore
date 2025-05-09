@@ -49,4 +49,4 @@ coverage/
 *.swo
 
 # Ignorer le fichier settings.py dans src/sneakers
-src/sneakers/settings.py
+sneakers/settings.py
