@@ -20,12 +20,6 @@ Ce projet met en avant mes compétences en intégration web, structuration de co
 
 ---
 
-## 📸 Aperçu
-
-![screenshot](static/images/ReadMe/Alpha-sneakers.jpg)
-
----
-
 ## 🖥️ Technologies utilisées
 
 - HTML5  
