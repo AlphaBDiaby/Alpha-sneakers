@@ -1,0 +1,49 @@
+# Ignorer les fichiers pyc et d'autres fichiers générés par Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.db
+
+# Ignorer les fichiers de base de données SQLite
+db.sqlite3
+
+# Ignorer les fichiers d'environnement virtuel
+venv/
+env/
+ENV/
+.venv/
+.virtualenv/
+
+# Ignorer les fichiers de configuration spécifiques à l'IDE
+.idea/
+.vscode/
+
+# Ignorer les fichiers de configuration d'éditeur
+*.sublime-project
+*.sublime-workspace
+
+# Ignorer les fichiers système de macOS
+.DS_Store
+Thumbs.db
+
+# Ignorer les logs et les fichiers temporaires
+*.log
+*.pot
+*.mo
+
+# Ignorer les fichiers de cache Django
+*.log
+*.pot
+*.mo
+
+# Ignorer les fichiers de tests générés
+coverage/
+*.cover
+*.py,cover
+
+# Ignorer les fichiers temporaires et de sauvegarde
+*~
+*.bak
+*.swp
+*.swo
