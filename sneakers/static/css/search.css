@@ -1,0 +1,65 @@
+/* Style général du formulaire de recherche dans la navbar */
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto; /* Pousse le formulaire vers la droite */
+}
+
+/* Style de l'input de recherche */
+.search-input {
+    padding: 6px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc; /* Plus léger que #ddd */
+    border-radius: 25px;
+    outline: none;
+    transition: all 0.3s ease;
+    width: 150px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    background-image: url('data:image/svg+xml;utf8,<svg fill="gray" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0s.41-1.08 0-1.49L15.5 14zm-6 0C8.01 14 6 11.99 6 9.5S8.01 5 10.5 5 15 7.01 15 9.5 12.99 14 10.5 14z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 35px;
+}
+
+
+/* L'input lorsqu'il est focus (cliqué) */
+.search-input:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.6);
+}
+
+/* Style du bouton de recherche */
+/*.search-button {
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Effet au survol du bouton */
+/*.search-button:hover {
+    background-color: #003f74;
+}
+
+/* Si l'écran est trop petit (responsive), la largeur du champ de recherche peut être réduite */
+@media (max-width: 768px) {
+    .search-input {
+        width: 200px;
+    }
+}
+
+.cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    vertical-align: top;
+    margin-left: 5px;
+}

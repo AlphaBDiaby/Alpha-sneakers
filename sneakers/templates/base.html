@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Alpha-Sneakers{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/image.css' %}">
+    <link rel="stylesheet" href="{% static 'css/search.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <a href='../' class="logo">Alpha-Sneakers</a>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">
+        <i class="fas fa-bars"></i>
+    </label>
+    <ul class="nav-links">
+        <li><a href="#Nouveauté" class="active-link">Nouveauté</a></li>
+        <li><a href="#Homme" class="active-link">Homme</a></li>
+        <li><a href="#Femme" class="active-link">Femme</a></li>
+        <li><a href="#Enfant" class="active-link">Enfant</a></li>
+        <li><a href="Promotion" class="active-link">Promotion</a></li>
+        <li><a href="#apropos" class="active-link">À propos</a></li>
+
+
+        <!-- Formulaire de recherche ajouté à la navbar -->
+        <form action="{% url 'search' %}" method="get" class="search-form">
+            <input type="text" name="q" placeholder="Rechercher..." required class="search-input">
+        </form>
+
+        <li>
+            <a href="{% url 'cart' %}" class="active-link">
+                <i class="fas fa-shopping-cart"></i> Panier
+                {% if cart_item_count %}
+                    <span class="cart-count">{{ cart_item_count }}</span>
+                {% endif %}
+            </a>
+        </li>
+
+    </ul>
+</nav>
+
+<!-- Contenu spécifique de chaque page -->
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<section id="apropos" class="about-section">
+    <h2>À propos du site</h2>
+    <p>⚠️ Ce site est un <strong>projet personnel / étudiant</strong> développé dans un but purement pédagogique.</p>
+    <ul>
+        <li>🛍️ Aucun produit n’est réellement en vente.</li>
+        <li>💳 Il est <strong>impossible de passer commande</strong> ou de fournir des informations de paiement.</li>
+        <li>🔒 Aucune donnée personnelle n’est collectée à des fins commerciales.</li>
+    </ul>
+    <p>Ce site n’a <strong>aucune vocation commerciale</strong> et sert uniquement de démonstration technique.</p>
+
+    <div class="contact-info">
+        <p>📩 Pour toute question ou retour, vous pouvez me contacter :</p>
+        <a href="mailto:alphadu92@live.fr" class="contact-button">Envoyer un e-mail</a>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <p>⚠️ Les modèles de sneakers, noms, et visuels utilisés sur ce site sont fictifs ou utilisés à des fins de démonstration. Aucune affiliation avec des marques réelles n’est revendiquée.</p>
+</footer>
+
+</body>
+</html>
+

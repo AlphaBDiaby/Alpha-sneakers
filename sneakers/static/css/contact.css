@@ -1,0 +1,35 @@
+.about-section {
+    background-color: #f5f5f5;
+    padding: 60px 20px;
+    text-align: center;
+    color: #333;
+}
+
+.about-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.about-section ul li {
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    margin-top: 40px;
+}
+
+.contact-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 24px;
+    background-color: #111;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #444;
+}

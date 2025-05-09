@@ -1,0 +1,259 @@
+
+/* Conteneur principal pour la section sneaker */
+.sneaker-scrollbar {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 30px 0;
+}
+.sneaker-scrollbar p {
+    margin-bottom: 0px;
+}
+
+.sneaker-scrollbar .container {
+    text-align: left; /* aligne tout le texte contenu */`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Conteneur central */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Sous-conteneur avec scroll horizontal */
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-top: 15px;
+  width: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f4f4f4;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+/* Apparence de la barre de défilement */
+.scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
+
+.sneaker-card {
+  position: relative;
+  flex: 0 0 auto;
+  width: 280px; /* Augmente à 250px ou plus */
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+/* Carte contenant l'image de sneaker */
+.sneaker-card img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Zoom au survol */
+/*.sneaker-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Image spécifique avec nouvelle classe */
+.sneaker-img {
+  width: 1500px;
+  height: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn-on-img {
+  position: absolute;
+  width: auto;          /* ou fixe : ex. 150px */
+  height: auto;
+  bottom: 60px;
+  left: 30%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.btn-on-img:hover {
+  opacity: 1;
+  background-color: #D3D3D3;
+}
+
+.banniere-promo {
+    width: 100%;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 90px;
+    position: relative;
+    overflow: hidden;
+    background: center/cover no-repeat;
+    color: white;
+}
+
+.banniere-contenu {
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.banniere-promo h2 {
+    font: bold;
+    font-size: 72px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 110px;
+    position: absolute;
+    bottom: 100px;
+    left: 70px;
+}
+
+.banniere-promo p {
+    font-size: 18px;
+    margin-bottom: 60px;
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+}
+
+.btn-promo {
+    background-color: white;
+    color: black;
+    padding: 12px 24px;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 19px;
+    transition: background 0.3s ease;
+    position: absolute;
+    bottom: 100px;
+    left: 255px;
+}
+
+.btn-promo:hover {
+    background-color: #D3D3D3;
+}
+
+.text-reveal {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.text-reveal::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    background: linear-gradient(0deg, grey, white, grey);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.image-row {
+  display: flex;              /* Les images s'affichent en ligne */
+  justify-content: center;   /* Centre les images horizontalement */
+  gap: 20px; /* Espace entre les deux images */
+  margin-top: 20px;
+  flex-wrap: wrap;           /* Passe en colonne si l’écran est trop petit */
+}
+
+.image-row img {
+  max-width: 100%;
+  width: 45%;                /* Chaque image prend 45% de la largeur du conteneur */
+  height: auto;              /* Garde les proportions */
+  border-radius: 10px;       /* Coins arrondis (facultatif) */
+}
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  position: relative;
+  width: 45%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.image-container img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.bottom-left-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.bottom-left-content p{
+    font-size: 15px;
+}
+
+
+.overlay-text {
+  margin-bottom: 8px;
+  color: #F8F8FF	;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black;
+}
+
+.btn-overlay {
+  background-color: white;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.btn-overlay:hover {
+  background-color: #D3D3D3;
+}
