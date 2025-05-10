@@ -28,7 +28,7 @@ Ce projet met en avant mes compétences en intégration web, structuration de co
 
 ![Aperçu du site](sneakers/site-web/Collection.jpg)
 
-![Aperçu du site](sneakers/site-web/A propos.jpg)
+![Aperçu du site](sneakers/site-web/A_propos.jpg)
 
 ---
 ## 🖥️ Technologies utilisées
