@@ -33,6 +33,7 @@ Ce projet met en avant mes compétences en intégration web, structuration de co
 ---
 ## 🖥️ Technologies utilisées
 
+- Python
 - HTML5  
 - CSS3  
 - Git (versioning)  
