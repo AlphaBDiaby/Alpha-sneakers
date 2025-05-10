@@ -22,13 +22,13 @@ Ce projet met en avant mes compétences en intégration web, structuration de co
 
 ## 🖼 Aperçu du site
 
-![Aperçu du site](sneakers/site-web/Alpha-sneakers.jpg) 
+![Aperçu du site](sneakers/site-web/Alpha-sneakers.jpg)
+
 ![Aperçu du site](sneakers/site-web/Catalogue.jpg)
+
 ![Aperçu du site](sneakers/site-web/Collection.jpg)
+
 ![Aperçu du site](sneakers/site-web/A propos.jpg)
-
-
-
 
 ---
 ## 🖥️ Technologies utilisées
