@@ -1,23 +1,82 @@
 {% extends 'sneakers/base.html' %}
+{% load static %}
 
 {% block content %}
+<div class="product-page">
+  <!-- IMAGE -->
+  <div class="product-image">
+    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+  </div>
 
-    <h1>{{ product.name}}</h1>
-    <h2>€{{ product.price}}</h2>
-    <img src="{{ product.image.url}}" alt="{{ product.name }}" style="max-width: 300px">
-    <p>{{ product.description }}</p>
+  <!-- DÉTAILS -->
+  <div class="product-details">
+    <h1>{{ product.name }}</h1>
+    <h2>€{{ product.price }}</h2>
+    <div class="rating">★★★★☆ <span>(128 avis)</span></div>
 
+    <!-- Description -->
+    <p class="product-description">{{ product.description }}</p>
+
+    <!-- Taille -->
+    <label for="size">Taille :</label>
+    <select id="size" name="size" class="size-select">
+      <option value="38">38</option>
+      <option value="39">39</option>
+      <option value="40">40</option>
+      <option value="41">41</option>
+      <option value="42">42</option>
+      <option value="43">43</option>
+      <option value="44">44</option>
+      <option value="45">45</option>
+      <option value="46">46</option>
+
+    </select>
+
+    <!-- Stock -->
+    <p class="stock-info">✔️ En stock — Livraison gratuite sous 48h</p>
+
+    <!-- Bouton -->
     {% if user.is_authenticated %}
-    <p>
-        <a href="{% url 'add-to-cart' product.slug %}">
-            Ajouter au panier
-        </a>
-    </p>
+      <a href="{% url 'add-to-cart' product.slug %}" class="add-to-cart-button">Ajouter au panier</a>
+    {% else %}
+      <a href="{% url 'login' %}" class="add-to-cart-button">Connecte-toi pour acheter</a>
     {% endif %}
+  </div>
+</div>
 
+<!-- Suggestions -->
+<div class="suggestions">
+  <h3>Vous aimerez aussi</h3>
+  <div class="suggested-products">
 
+    <div class="card">
+      <img src="{% static 'images/bsk-10.jpg' %}" alt="BSK-10">
+      <div class="card-info">
+        <p class="model-name">BSK-10</p>
+        <span class="price">€109</span>
+        <a href="{% url 'product' 'bsk-10' %}" class="btn-card">Acheter</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="{% static 'images/animax2.jpg' %}" alt="Animax 70">
+      <div class="card-info">
+        <p class="model-name">Animax 70</p>
+        <span class="price">€99</span>
+        <a href="{% url 'product' 'animax-70' %}" class="btn-card">Acheter</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="{% static 'images/ztx 95.jpg' %}" alt="ZTX 95">
+      <div class="card-info">
+        <p class="model-name">ZTX 95</p>
+        <span class="price">€119</span>
+        <a href="{% url 'product' 'ztx-95-b' %}" class="btn-card">Acheter</a>
+      </div>
+    </div>
+
+  </div>
+</div>
 
 {% endblock %}
-
-</body>
-</html>

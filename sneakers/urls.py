@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 from accounts.views import signup, logout_user, login_user
-from sneakers.views import index, cart, checkout, product_detail, add_to_cart
+from sneakers.views import index, cart, checkout, product_detail, add_to_cart, delete_cart
 
 from sneakers import settings
 
@@ -17,6 +17,7 @@ urlpatterns = [
     path('product/<str:slug>/add-to-cart/', add_to_cart, name="add-to-cart"),
     path('', include('article.urls')),
     path('panier/', cart, name='cart'),
+    path('panier/supprimer/', delete_cart, name='delete-cart'),
     path('checkout/', checkout, name='checkout'),
 
 
