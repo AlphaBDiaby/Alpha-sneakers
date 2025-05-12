@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>{% block title %}Alpha-Sneakers{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="{% static 'css/image.css' %}">
     <link rel="stylesheet" href="{% static 'css/search.css' %}">
     <link rel="stylesheet" href="{% static 'css/contact.css' %}">
@@ -34,6 +34,18 @@
         <form action="{% url 'search' %}" method="get" class="search-form">
             <input type="text" name="q" placeholder="Rechercher..." required class="search-input">
         </form>
+        {% if user.is_authenticated %}
+            {{ user.username }}
+        <a href="{% url 'logout' %}">Déconnexion</a>
+        {% else %}
+            <a href="{% url 'login' %}" class="nav-link">
+                <i class="fas fa-user"></i>
+            </a>
+            <a href="{% url 'signup' %}" class="nav-link">
+              <i class="fas fa-user"></i>
+            </a>
+        {% endif %}
+
 
         <li>
             <a href="{% url 'cart' %}" class="active-link">
@@ -43,7 +55,6 @@
                 {% endif %}
             </a>
         </li>
-
     </ul>
 </nav>
 

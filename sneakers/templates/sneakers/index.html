@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'sneakers/base.html' %}
 {% load static %}
 
 {% block content %}
@@ -7,7 +7,7 @@
     <div class="banniere-contenu">
         <h2 class="text-reveal" data-text="ANIMAX 80">ANIMAX 80</h2>
         <p>Découvrez notre nouvelle paire exclusive Animax 80.</p>
-        <a href="#nouveaute" class="btn-promo">Acheter</a>
+        <a href="{% url 'product' 'animax-80' %}" class="btn-promo">Acheter</a>
     </div>
 </section>
 
@@ -18,7 +18,7 @@
         <div class="bottom-left-content">
             <h3 class="overlay-text">BSK-10</h3>
             <p class="overlay-text">Libére ton potentiel</p>
-            <a href="#" class="btn-overlay">Acheter</a>
+            <a href="{% url 'product' 'bsk-10' %}" class="btn-overlay">Acheter</a>
         </div>
       </div>
 
@@ -27,7 +27,7 @@
         <div class="bottom-left-content">
             <h3 class="overlay-text">Animax 70</h3>
             <p class="overlay-text">Collection exclusive</p>
-            <a href="#" class="btn-overlay">Acheter</a>
+            <a href="{% url 'product' 'animax-70' %}" class="btn-overlay">Acheter</a>
         </div>
       </div>
 
@@ -36,7 +36,7 @@
         <div class="bottom-left-content">
             <h3 class="overlay-text">JP-800</h3>
             <p class="overlay-text">Série Limitée</p>
-            <a href="#" class="btn-overlay">Acheter</a>
+            <a href="{% url 'product' 'jp-800' %}" class="btn-overlay">Acheter</a>
         </div>
       </div>
 
@@ -45,7 +45,7 @@
         <div class="bottom-left-content">
             <h3 class="overlay-text">ZTX 95</h3>
             <p class="overlay-text">Nouvelle arrivée</p>
-            <a href="#" class="btn-overlay">Acheter</a>
+            <a href="{% url 'product' 'ztx-95-b' %}" class="btn-overlay">Acheter</a>
         </div>
       </div>
     </div>
@@ -59,47 +59,48 @@
         <div class="scroll-container">
           <div class="sneaker-card">
             <img src="static/images/vortex.jpg" alt="NX-42">
-            <a href="NX-42.html" class="btn-on-img">NX-42</a>
+            <a href="{% url 'product' 'nx-42' %}" class="btn-on-img">NX-42</a>
+
           </div>
 
           <div class="sneaker-card">
             <img src="static/images/Super Nova.jpg" alt="Nova Drift">
-            <a href="Nova Drift.html" class="btn-on-img">Nova Drift</a>
+            <a href="{% url 'product' 'nova-drift' %}" class="btn-on-img">Nova Drift</a>
           </div>
 
           <div class="sneaker-card">
             <img src="static/images/velvet-700.jpg" alt="velvet-700">
-            <a href="velvet-700.html" class="btn-on-img">Velvet-700</a>
+            <a href="{% url 'product' 'velvet-700' %}" class="btn-on-img">Velvet-700</a>
           </div>
 
           <div class="sneaker-card">
             <img src="static/images/Neo Cruze.jpg" alt="Neo Cruze">
-            <a href=">ztx 95.html" class="btn-on-img">ZTX 95</a>
+            <a href="{% url 'product' 'ztx-95-r' %}" class="btn-on-img">ZTX 95</a>
           </div>
 
           <div class="sneaker-card">
             <img src="static/images/RX Spider.jpg" alt="RX Spider">
-            <a href="RX Spider.html" class="btn-on-img">RX Spider</a>
+            <a href="{% url 'product' 'rx-spider' %}" class="btn-on-img">RX Spider</a>
           </div>
 
           <div class="sneaker-card">
             <img src="static/images/Subzéro-1000.jpg" alt="Subzéro-1000">
-            <a href="Subzéro-1000.html" class="btn-on-img">S-Zéro 14</a>
+            <a href="{% url 'product' 's-zero-14' %}" class="btn-on-img">S-Zero-14</a>
           </div>
 
           <div class="sneaker-card">
             <img src="static/images/Air Sky.jpg" alt="Air Sky">
-            <a href="Air-Sky.html" class="btn-on-img">Air Sky</a>
+            <a href="{% url 'product' 'air-sky' %}" class="btn-on-img">Air Sky</a>
           </div>
 
           <div class="sneaker-card">
             <img src="static/images/RX spectrum.jpg" alt="RX spectrum">
-            <a href="RX spectrum.html" class="btn-on-img">RX Spectrum</a>
+            <a href="{% url 'product' 'rx-spectrum' %}" class="btn-on-img">RX Spectrum</a>
           </div>
 
           <div class="sneaker-card">
             <img src="static/images/Vector.jpg" alt="Kairo 7">
-            <a href="Kairo 7.html" class="btn-on-img">Kairo 7</a>
+            <a href="{% url 'product' 'kairo-7' %}" class="btn-on-img">Kairo-7</a>
           </div>
         </div> <!-- fin de .scroll-container -->
     </div> <!-- fin de .container -->

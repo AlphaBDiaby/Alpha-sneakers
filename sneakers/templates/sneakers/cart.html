@@ -1,0 +1,21 @@
+{% extends 'sneakers/base.html' %}
+
+{% block title %}Votre Panier{% endblock %}
+
+{% block content %}
+<h2>Votre Panier</h2>
+<ul>
+    {% for order in orders %}
+
+
+        <h2>{{ order.product.name }}</h2>
+        <img src="{{ order.product.image.url}}" alt="{{ order.product.name }}" style="max-width: 300px">
+        <p>{{ order.quantity }} dans le panier</p>
+        <p>Total : {{ order.product.price }}€</p>
+        <a href="{% url 'checkout' %}">Passer à la caisse</a>
+
+
+    {% endfor %}
+</ul>
+
+{% endblock %}

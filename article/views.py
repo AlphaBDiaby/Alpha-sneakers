@@ -9,7 +9,8 @@ def search_view(request):  # Cette fonction sera appelée quand un utilisateur f
     results = Sneaker.objects.filter(name__icontains=query) if query else []
 
     # On affiche la page search_results.html avec les résultats et la recherche tapée
-    return render(request, 'search_results.html', {
+    return render(request, 'article/search_results.html', {
         'query': query,
         'results': results
     })
+
